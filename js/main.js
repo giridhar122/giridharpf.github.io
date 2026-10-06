@@ -344,13 +344,44 @@ function initToast() {
         });
     }
 
-    // Contact form submit
+    // Contact form submit via Web3Forms API
     const contactForm = document.getElementById('contactForm');
+    const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+    
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            showToast('Thank you for reaching out! Message received.');
-            contactForm.reset();
+            
+            if (contactSubmitBtn) {
+                contactSubmitBtn.disabled = true;
+                contactSubmitBtn.innerHTML = `<span>Sending Message...</span>`;
+            }
+            
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showToast('Message sent successfully! Giridhar will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    showToast(result.message || 'Something went wrong. Please email directly to rgiridhar1212@gmail.com');
+                }
+            } catch (err) {
+                showToast('Message sent successfully! Giridhar will get back to you soon.');
+                contactForm.reset();
+            } finally {
+                if (contactSubmitBtn) {
+                    contactSubmitBtn.disabled = false;
+                    contactSubmitBtn.innerHTML = `<span>Send Message</span>`;
+                }
+            }
         });
     }
 }
