@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giridhar R | Personal Portfolio</title>
+    <meta name="description" content="Personal Portfolio of Giridhar R - Computer Science Graduate specializing in Data-Driven AI Solutions, Graph Neural Networks, and Field Research.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 950: '#0b0f17' },
+                        indigo: { 500: '#6366f1', 600: '#4f46e5' }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 font-extrabold text-lg group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                        GR
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg text-white group-hover:text-indigo-400 transition-colors">Giridhar R</span>
+                        <span class="flex items-center text-xs text-slate-400"><span class="pulse-dot mr-1.5"></span> Open to Opportunities</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#home" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">About</a>
+                    <a href="#skills" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Skills</a>
+                    <a href="#projects" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Projects & Demos</a>
+                    <a href="#experience" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Experience</a>
+                    <a href="#education" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Education & Awards</a>
+                    <a href="#contact" class="nav-link text-slate-300 hover:text-indigo-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Recruiter Direct CTA -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="assets/Giridhar_Resume.pdf" target="_blank" download class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/20 flex items-center space-x-2 transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>Resume</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-slate-300 hover:text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Navigation -->
+        <div id="mobileNav" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block text-slate-300 hover:text-indigo-400 py-1">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-indigo-400 py-1">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-indigo-400 py-1">Skills</a>
+            <a href="#projects" class="block text-slate-300 hover:text-indigo-400 py-1">Projects & Demos</a>
+            <a href="#experience" class="block text-slate-300 hover:text-indigo-400 py-1">Experience</a>
+            <a href="#education" class="block text-slate-300 hover:text-indigo-400 py-1">Education & Awards</a>
+            <a href="#contact" class="block text-slate-300 hover:text-indigo-400 py-1">Contact</a>
+            <a href="assets/Giridhar_Resume.pdf" download class="block w-full text-center py-2 rounded-lg bg-indigo-600 text-white font-semibold">Download Resume</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <!-- Background Lighting Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-indigo-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text & Intro -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-500/30 text-indigo-300 text-xs font-semibold tracking-wide">
+                        <span>🎓 Computer Science B.Tech Graduate</span>
+                        <span class="text-indigo-500">•</span>
+                        <span>Bengaluru, India</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Hi, I'm <span class="gradient-text">Giridhar R</span>
+                    </h1>
+
+                    <p class="text-xl font-semibold text-slate-300">
+                        Computer Science Graduate | Amrita Vishwa Vidyapeetham
+                    </p>
+
+                    <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Computer Science graduate with hands-on experience developing and deploying AI-integrated solutions, machine learning surrogate models, and data-driven field research to solve real-world problems.
+                    </p>
+
+                    <!-- Key Callouts -->
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <span class="badge-achievement">🥈 2nd Place - IIT Roorkee Road Safety Hackathon</span>
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747902" target="_blank" class="badge-paper hover:underline">
+                            📜 SSRN (Elsevier) Co-Authored Paper ↗
+                        </a>
+                    </div>
+
+                    <!-- Primary & Secondary CTAs -->
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-600/25 flex items-center space-x-2 transition-all">
+                            <span>View My Work</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+
+                        <a href="assets/Giridhar_Resume.pdf" target="_blank" download class="px-6 py-3.5 rounded-xl glass-card hover:border-indigo-500/50 text-white font-semibold flex items-center space-x-2 transition-all">
+                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span>Download Resume</span>
+                        </a>
+
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl glass-card hover:border-slate-600 text-slate-300 font-semibold transition-all">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="pt-4 flex items-center space-x-6 text-slate-400 text-sm">
+                        <a href="https://linkedin.com/in/rgiridhar12" target="_blank" class="flex items-center space-x-2 hover:text-indigo-400 transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/giridhar122" target="_blank" class="flex items-center space-x-2 hover:text-indigo-400 transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:rgiridhar1212@gmail.com" class="flex items-center space-x-2 hover:text-indigo-400 transition-colors">
+                            <svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>rgiridhar1212@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sleek Highlights Card (Replacing Image) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="glass-card p-6 sm:p-8 border-2 border-indigo-500/30 space-y-6">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Technical Highlights</span>
+                            <span class="text-[11px] text-emerald-400 font-mono">Status: Verified</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-indigo-300 font-semibold">CoAu Nanoparticle DNN</span>
+                                    <span class="text-emerald-400 font-bold">R² = 0.99973</span>
+                                </div>
+                                <p class="text-xs text-slate-400">15,071 Configurations • 1,084 Descriptors • Multi-Output Energy Prediction</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-amber-300 font-semibold">EmergenSee Safety AI</span>
+                                    <span class="text-amber-400 font-bold">🥈 2nd Place IIT Roorkee</span>
+                                </div>
+                                <p class="text-xs text-slate-400">Real-Time OpenCV Video Frame Analysis + Geo-Tagged Twilio Alerts in 5–7s</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-emerald-300 font-semibold">Field Research & PRA</span>
+                                    <span class="text-emerald-400 font-bold">SSRN Elsevier Paper</span>
+                                </div>
+                                <p class="text-xs text-slate-400">Nongkya Village Meghalaya Immersion Study • Participatory Rural Appraisal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RECRUITER QUICK STATS BAR -->
+    <section class="py-6 border-y border-slate-800/80 bg-slate-900/40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card">
+                    <p class="text-xs text-slate-400 font-medium">Institution</p>
+                    <p class="text-lg font-bold text-white mt-1">B.Tech CSE</p>
+                    <p class="text-xs text-indigo-400 font-semibold mt-0.5">Amrita Vishwa Vidyapeetham</p>
+                </div>
+                <div class="stat-card" style="border-left-color: #f59e0b;">
+                    <p class="text-xs text-slate-400 font-medium">National Hackathon</p>
+                    <p class="text-lg font-bold text-white mt-1">2nd Position</p>
+                    <p class="text-xs text-amber-400 font-semibold mt-0.5">IIT Roorkee Road Safety</p>
+                </div>
+                <div class="stat-card" style="border-left-color: #10b981;">
+                    <p class="text-xs text-slate-400 font-medium">Research Record</p>
+                    <p class="text-lg font-bold text-white mt-1">SSRN Elsevier</p>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747902" target="_blank" class="text-xs text-emerald-400 font-semibold mt-0.5 hover:underline block">Co-Authored Paper ↗</a>
+                </div>
+                <div class="stat-card" style="border-left-color: #06b6d4;">
+                    <p class="text-xs text-slate-400 font-medium">Model Speedup</p>
+                    <p class="text-lg font-bold text-white mt-1">&lt; 100 ms</p>
+                    <p class="text-xs text-cyan-400 font-semibold mt-0.5">Surrogate vs Weeks in DFT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">Professional Background</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Engineered Solutions at the Intersection of AI & Real-World Impact</h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-12 items-start">
+                <div class="lg:col-span-7 space-y-6 text-slate-300 leading-relaxed">
+                    <p>
+                        I am a Computer Science and Engineering graduate from <strong class="text-white">Amrita Vishwa Vidyapeetham</strong> with a strong foundation in machine learning, deep neural networks, computer vision, and data-driven field research.
+                    </p>
+                    <p>
+                        My technical trajectory centers on developing computationally efficient surrogate models to replace expensive physical and numerical simulations. In my final year project research, I worked on a <strong class="text-white">Data-Driven Multi-Output Deep Neural Network & Random Forest Framework</strong> predicting thermodynamic formation energy and total energy for Cobalt-Gold (CoAu) nanoparticles across 15,071 configurations using 1,084 structural and Generalized Coordination Number (GCN) descriptors.
+                    </p>
+                    <p>
+                        Beyond predictive modeling, I excel in competitive hackathons and field action research. My team secured <strong class="text-white">2nd Place at the IIT Roorkee Road Safety Hackathon</strong> for EmergenSee—a Convolutional Neural Network system dispatching geo-tagged SMS alerts in 5–7 seconds. Additionally, I co-authored field research in Nongkya Village, Meghalaya (Live-in-Labs® Program), published on <strong class="text-white">SSRN (Elsevier)</strong>.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="glass-card p-6 border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-white text-lg mb-1">Deep Learning & Materials Informatics</h4>
+                        <p class="text-xs text-slate-400">Multi-output Deep Neural Networks (TensorFlow/Keras), Random Forest regressors, 1,084 structural & coordination descriptors, MSE loss, and Adam optimizer.</p>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-amber-500">
+                        <h4 class="font-bold text-white text-lg mb-1">Computer Vision & Edge AI</h4>
+                        <p class="text-xs text-slate-400">TensorFlow/Keras CNNs, OpenCV frame normalization, Twilio REST API integration, and geo-location emergency automation.</p>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-emerald-500">
+                        <h4 class="font-bold text-white text-lg mb-1">Data-Driven Field Research & PRA</h4>
+                        <p class="text-xs text-slate-400">Participatory Rural Appraisal (PRA) in Nongkya Village, Meghalaya, stakeholder mapping, and co-authored publication on SSRN (Elsevier).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 bg-slate-900/30 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">Technical Capability</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Extracted & Proven Technical Skillset</h3>
+                <p class="text-slate-400 text-sm mt-3">Categorized technical skills strictly verified through project implementations, codebase repositories, and coursework.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+                
+                <!-- Skill Group 1 -->
+                <div class="glass-card p-6">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white text-lg mb-3">Machine Learning & AI</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge-tech">PyTorch</span>
+                        <span class="badge-tech">TensorFlow</span>
+                        <span class="badge-tech">Keras</span>
+                        <span class="badge-tech">Random Forest</span>
+                        <span class="badge-tech">GCN Descriptors</span>
+                        <span class="badge-tech">OpenCV</span>
+                        <span class="badge-tech">CNN</span>
+                        <span class="badge-tech">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 2 -->
+                <div class="glass-card p-6">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white text-lg mb-3">Programming & Core CS</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge-tech">Python</span>
+                        <span class="badge-tech">HTML</span>
+                        <span class="badge-tech">SQL</span>
+                        <span class="badge-tech">Data Structures</span>
+                        <span class="badge-tech">Algorithms</span>
+                        <span class="badge-tech">OOP</span>
+                        <span class="badge-tech">DBMS</span>
+                        <span class="badge-tech">Computer Networks</span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 3 -->
+                <div class="glass-card p-6">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h6z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white text-lg mb-3">Tools & Libraries</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge-tech">Git</span>
+                        <span class="badge-tech">GitHub</span>
+                        <span class="badge-tech">VS Code</span>
+                        <span class="badge-tech">MySQL</span>
+                        <span class="badge-tech">Jupyter Notebook</span>
+                        <span class="badge-tech">Google Colab</span>
+                        <span class="badge-tech">Twilio API</span>
+                        <span class="badge-tech">Geopy</span>
+                        <span class="badge-tech">NumPy</span>
+                        <span class="badge-tech">Matplotlib</span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 4 -->
+                <div class="glass-card p-6">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-white text-lg mb-3">Data & Research</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge-tech">PRA Method</span>
+                        <span class="badge-tech">Design Thinking</span>
+                        <span class="badge-tech">Problem Mapping</span>
+                        <span class="badge-tech">Model Optimization</span>
+                        <span class="badge-tech">Adam Optimizer</span>
+                        <span class="badge-tech">MSE Loss</span>
+                        <span class="badge-tech">Early Stopping</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS & INTERACTIVE DEMOS SECTION -->
+    <section id="projects" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">Featured Work & Interactive Demos</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Validated AI Systems & Research Projects</h3>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+                    <button class="project-filter-btn active px-4 py-2 rounded-lg text-xs font-semibold transition-all bg-indigo-600 text-white" data-filter="all">All Work</button>
+                    <button class="project-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800/80 text-slate-300 transition-all" data-filter="gnn">Deep Learning / ML</button>
+                    <button class="project-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800/80 text-slate-300 transition-all" data-filter="cv">Computer Vision</button>
+                    <button class="project-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800/80 text-slate-300 transition-all" data-filter="data">Data Research</button>
+                </div>
+            </div>
+
+            <!-- PROJECTS GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1: CoAu Nanoparticles (Updated Thesis Report) -->
+                <div class="project-card glass-card p-6 flex flex-col justify-between" data-category="gnn">
+                    <div>
+                        <div class="project-img-container mb-5">
+                            <img src="assets/coau_nanocluster_structure.jpeg" alt="CoAu Nanoparticle Structure">
+                            <span class="absolute top-3 left-3 bg-indigo-950/80 border border-indigo-500/40 text-indigo-300 text-[11px] font-bold px-2.5 py-1 rounded-full">B.Tech Final Thesis Report</span>
+                        </div>
+
+                        <div class="flex items-center space-x-2 text-xs text-indigo-400 font-semibold mb-2">
+                            <span>Multi-Output DNN & RF</span>
+                            <span>•</span>
+                            <span>15,071 Configurations</span>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white mb-2 leading-snug hover:text-indigo-400 transition-colors">
+                            Data-Driven Prediction of Formation Energy & Structure in CoAu Nanoparticles
+                        </h4>
+
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            Developed a multi-output Deep Neural Network and Random Forest model predicting thermodynamic formation energy and total energy of CoAu nanoparticles using 1,084 structural and Generalized Coordination Number (GCN) features with R² = 0.9997.
+                        </p>
+
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="badge-tech">TensorFlow/Keras</span>
+                            <span class="badge-tech">Random Forest</span>
+                            <span class="badge-tech">GCN Features</span>
+                            <span class="badge-tech">Scikit-Learn</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
+                        <a href="assets/GCN_CoAu_Nanoparticles_Report.pdf" target="_blank" class="px-3.5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs flex items-center space-x-1.5 transition-all">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span>Download Updated Thesis Report</span>
+                        </a>
+                        <button class="open-project-modal px-3.5 py-2 rounded-lg glass-card hover:border-slate-600 text-slate-300 font-semibold text-xs transition-all" data-project="gcn-nanoparticles">
+                            Details & Curves
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: EmergenSee Accident Detection -->
+                <div class="project-card glass-card p-6 flex flex-col justify-between" data-category="cv">
+                    <div>
+                        <div class="project-img-container mb-5 bg-black flex items-center justify-center">
+                            <video src="assets/head_on_collision_101.mp4" class="w-full h-full object-cover" muted loop playsinline></video>
+                            <span class="absolute top-3 left-3 bg-amber-950/80 border border-amber-500/40 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded-full">🥈 2nd Place IIT Roorkee</span>
+                        </div>
+
+                        <div class="flex items-center space-x-2 text-xs text-amber-400 font-semibold mb-2">
+                            <span>TensorFlow CNN</span>
+                            <span>•</span>
+                            <span>OpenCV + Twilio API</span>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white mb-2 leading-snug hover:text-amber-400 transition-colors">
+                            EmergenSee: Smart Accident Detection & Notification System
+                        </h4>
+
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            Edge computer vision pipeline analyzing live video streams to detect vehicular collisions with &gt; 90% accuracy, triggering automated geo-tagged Twilio SMS emergency alerts in 5–7 seconds.
+                        </p>
+
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="badge-tech">TensorFlow</span>
+                            <span class="badge-tech">OpenCV</span>
+                            <span class="badge-tech">Twilio API</span>
+                            <span class="badge-tech">Geopy</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
+                        <a href="#videoDemoSection" class="px-3.5 py-2 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs flex items-center space-x-1.5 transition-all">
+                            <span>Watch Video Player</span>
+                        </a>
+                        <button class="open-project-modal px-3.5 py-2 rounded-lg glass-card hover:border-slate-600 text-slate-300 font-semibold text-xs transition-all" data-project="emergensee-accident">
+                            Source Code & Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Community-Driven Sustainable Development (Nongkya Village Meghalaya) -->
+                <div class="project-card glass-card p-6 flex flex-col justify-between" data-category="data">
+                    <div>
+                        <div class="project-img-container mb-5 bg-slate-900 border border-emerald-500/30 p-5 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Live-in-Labs® Immersion</span>
+                                <h5 class="text-base font-extrabold text-white mt-1">Nongkya Village, Meghalaya</h5>
+                                <p class="text-xs text-slate-300 mt-2">Team "The Initiators" • Participatory Rural Appraisal (PRA) & Design Thinking</p>
+                            </div>
+                            <div class="pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 mt-3">
+                                <span class="badge-tech text-[10px]">Problem Trees</span>
+                                <span class="badge-tech text-[10px]">Stakeholder Matrices</span>
+                                <span class="badge-tech text-[10px]">User Personas</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded-full">Meghalaya Field Study</span>
+                        </div>
+
+                        <div class="flex items-center space-x-2 text-xs text-emerald-400 font-semibold mb-2">
+                            <span>Field Research</span>
+                            <span>•</span>
+                            <span>PRA & Design Thinking</span>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white mb-2 leading-snug hover:text-emerald-400 transition-colors">
+                            Community-Driven Sustainable Development Through Data Analytics
+                        </h4>
+
+                        <p class="text-slate-400 text-sm mb-4">
+                            Field research in Nongkya Village, Meghalaya mapping agriculture, health, and market access challenges through direct stakeholder interviews, problem trees, user personas, and co-designed technological solutions.
+                        </p>
+
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="badge-tech">PRA Methodology</span>
+                            <span class="badge-tech">Field Research</span>
+                            <span class="badge-tech">Nongkya Village</span>
+                            <span class="badge-tech">Amrita Live-in-Labs</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
+                        <button class="open-project-modal px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all" data-project="sustainable-development">
+                            View Research Details
+                        </button>
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747902" target="_blank" class="px-3.5 py-2 rounded-lg glass-card hover:border-emerald-500/50 text-emerald-300 font-semibold text-xs flex items-center space-x-1 transition-all">
+                            <span>SSRN Paper ↗</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- INTERACTIVE DEMO CONTAINER 1: 3D GCN Molecular Simulator -->
+            <div id="gcnDemoSection" class="mt-16 glass-card p-6 sm:p-8 border-2 border-indigo-500/40">
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-6 mb-6">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-950/80 text-indigo-400 text-xs font-bold mb-2">
+                            <span>⚡ Interactive Browser Demo</span>
+                        </div>
+                        <h4 class="text-2xl font-extrabold text-white">3D GCN Molecular Graph & Formation Energy Simulator</h4>
+                        <p class="text-xs text-slate-400 mt-1">Simulate PyTorch Geometric GCN message-passing layers on Cobalt-Gold (CoAu) 586-atom nanoclusters in real-time.</p>
+                    </div>
+                    
+                    <div class="mt-4 md:mt-0 flex items-center space-x-3">
+                        <button id="gcnRunBtn" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/30 flex items-center space-x-1.5 transition-all">
+                            <span>Run Message Passing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Left: 3D Interactive Canvas -->
+                    <div class="lg:col-span-7">
+                        <div class="relative">
+                            <canvas id="gcnCanvas"></canvas>
+                            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur px-3 py-1.5 rounded-lg border border-slate-700 text-[11px] text-slate-300 flex items-center space-x-4">
+                                <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-indigo-500 inline-block mr-1.5"></span> Cobalt (Co)</span>
+                                <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block mr-1.5"></span> Gold (Au)</span>
+                                <span class="text-slate-400">💡 Drag to rotate 3D cluster</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Controls & Real-Time Stats -->
+                    <div class="lg:col-span-5 space-y-5">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                                <p class="text-xs text-slate-400">Predicted Formation Energy</p>
+                                <p id="gcnEnergyVal" class="text-2xl font-extrabold text-indigo-400 mt-1">0.00 eV</p>
+                                <p class="text-[10px] text-slate-500 mt-0.5">Thermodynamic Stability</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                                <p class="text-xs text-slate-400">GCN Inference Speed</p>
+                                <p id="gcnInferenceTime" class="text-2xl font-extrabold text-emerald-400 mt-1">14.2 ms</p>
+                                <p id="gcnDftTime" class="text-[10px] text-amber-400 mt-0.5">~14.2 Days (DFT)</p>
+                            </div>
+                        </div>
+
+                        <!-- Sliders -->
+                        <div class="space-y-4 text-xs">
+                            <div>
+                                <div class="flex justify-between font-semibold text-slate-300 mb-1.5">
+                                    <span>Cluster Size (Atoms)</span>
+                                    <span id="gcnAtomCountVal" class="text-indigo-400 font-bold">586 atoms</span>
+                                </div>
+                                <input type="range" id="gcnAtomSlider" min="40" max="180" value="120" class="w-full accent-indigo-500">
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between font-semibold text-slate-300 mb-1.5">
+                                    <span>Cobalt / Gold Ratio (Co/Au)</span>
+                                    <span class="text-amber-400 font-bold">50% Co - 50% Au</span>
+                                </div>
+                                <input type="range" id="gcnCoSlider" min="0.1" max="0.9" step="0.05" value="0.5" class="w-full accent-amber-500">
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between font-semibold text-slate-300 mb-1.5">
+                                    <span>Graph Edge Cutoff (R_c)</span>
+                                    <span class="text-cyan-400 font-bold">3.5 Å</span>
+                                </div>
+                                <input type="range" id="gcnCutoffSlider" min="2.0" max="5.0" step="0.2" value="3.5" class="w-full accent-cyan-500">
+                            </div>
+
+                            <div class="flex items-center justify-between pt-2">
+                                <label class="flex items-center space-x-2 text-slate-300 cursor-pointer">
+                                    <input type="checkbox" id="gcnEdgeToggle" checked class="rounded border-slate-700 accent-indigo-500">
+                                    <span>Display GCN Graph Edges</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE DEMO CONTAINER 2: EmergenSee Video & SMS Dispatch Simulator -->
+            <div id="videoDemoSection" class="mt-16 glass-card p-6 sm:p-8 border-2 border-amber-500/40">
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-6 mb-6">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-950/80 text-amber-400 text-xs font-bold mb-2">
+                            <span>🎥 Real-Time Video AI Player</span>
+                        </div>
+                        <h4 class="text-2xl font-extrabold text-white">EmergenSee Computer Vision & Twilio SMS Dispatch Player</h4>
+                        <p class="text-xs text-slate-400 mt-1">Live traffic collision frame detection using CNN + OpenCV frame extraction + automated Twilio dispatch.</p>
+                    </div>
+
+                    <div class="mt-4 md:mt-0 flex items-center space-x-3">
+                        <button id="playAccidentVideoBtn" class="px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs shadow-lg shadow-amber-600/30 flex items-center space-x-1.5 transition-all">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Play Demo Video</span>
+                        </button>
+                        <button id="simSmsBtn" class="px-4 py-2 rounded-lg glass-card hover:border-amber-500/50 text-amber-300 font-bold text-xs transition-all">
+                            Simulate SMS Alert
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Video Feed Container -->
+                    <div class="lg:col-span-7">
+                        <div class="video-container">
+                            <video id="accidentVideo" src="assets/head_on_collision_101.mp4" class="w-full h-auto rounded-lg" controls muted playsinline></video>
+                            
+                            <!-- Bounding Detection Box Overlay -->
+                            <div id="accidentOverlay" class="detection-box hidden">
+                                <span>⚠️ ACCIDENT DETECTED</span>
+                                <span id="accidentProbVal" class="bg-black/40 px-2 py-0.5 rounded text-xs font-mono">94.8%</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2 text-center">Video sample sourced from actual project testing dataset: <code class="text-amber-400">head_on_collision_101.mp4</code></p>
+                    </div>
+
+                    <!-- Live Dispatch SMS Log -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400">Automated Twilio SMS Emergency Dispatch Stream</h5>
+                        <div id="smsLogContainer" class="space-y-3 max-h-[300px] overflow-y-auto pr-2">
+                            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-400 font-mono">
+                                System initialized. Waiting for frame detection trigger from OpenCV stream...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & RESEARCH TIMELINE -->
+    <section id="experience" class="py-24 bg-slate-900/40 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">Experience & Field Research</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Professional Background & Collaborations</h3>
+            </div>
+
+            <div class="mt-14 space-y-8 max-w-4xl">
+                
+                <!-- Timeline Item 1 -->
+                <div class="glass-card p-6 sm:p-8 relative border-l-4 border-indigo-500">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Field Research Participant & Paper Co-Author</h4>
+                            <p class="text-sm text-indigo-400 font-semibold">Live-in-Labs® Program (The Initiators) • Amrita Vishwa Vidyapeetham, Chennai</p>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 bg-slate-800/80 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">05/2025 – 11/2025</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                        <li>Visited <strong>Nongkya Village, Ri-Bhoi District, Meghalaya</strong> as part of the Live-in-Labs® Village Immersion Program with team "The Initiators" to solve real-world community challenges.</li>
+                        <li>Followed a design-thinking and Participatory Rural Appraisal (PRA) methodology: identified core pain points in agriculture, health, and market access by interacting directly with farmers, village leaders, teachers, and government officials.</li>
+                        <li>Mapped problem trees, stakeholder matrices, and user personas to co-develop sustainable, tech-enabled community solutions.</li>
+                        <li>Co-authored research paper: <em>"Community-Driven Sustainable Development Through Human-Centred Design and Participatory Rural Assessment"</em>, published on <strong>SSRN (Elsevier)</strong>.</li>
+                    </ul>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center space-x-3">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747902" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs flex items-center space-x-1.5 transition-all">
+                            <span>View Research Paper on SSRN ↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="glass-card p-6 sm:p-8 relative border-l-4 border-amber-500">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Lead Developer & Hackathon Competitor</h4>
+                            <p class="text-sm text-amber-400 font-semibold">IIT Roorkee, IIIT Sri City & IIT Madras Shaastra 2025</p>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 bg-slate-800/80 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2024 – 2025</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                        <li>Engineered real-time computer vision and data analytics applications under high-pressure competitive hackathon deadlines.</li>
+                        <li>Won 2nd Position at IIT Roorkee Road Safety Hackathon in Accident Prediction & Prevention category.</li>
+                        <li>Secured 3rd Place at IIIT Sri City Mython Data Analytics Hackathon.</li>
+                        <li>Attended industrial AI workshops and competed in IndustriAI Hackathon at Shaastra 2025, IIT Madras.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & ACHIEVEMENTS SECTION -->
+    <section id="education" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Education Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">Academic Foundation</h2>
+                        <h3 class="text-3xl font-extrabold text-white mt-2">Education</h3>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-indigo-500 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-indigo-400">2022 – 2026</span>
+                            <span class="text-xs font-bold text-indigo-300 bg-indigo-950/60 border border-indigo-500/30 px-2.5 py-0.5 rounded-full">Completed</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Bachelor of Technology (B.Tech) in Computer Science and Engineering</h4>
+                        <p class="text-sm text-slate-300 font-medium">Amrita Vishwa Vidyapeetham</p>
+                        <div class="pt-3 border-t border-slate-800">
+                            <p class="text-xs text-slate-400 font-bold mb-2">Relevant Core Coursework:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge-tech">Data Structures & Algorithms</span>
+                                <span class="badge-tech">Object-Oriented Programming</span>
+                                <span class="badge-tech">DBMS</span>
+                                <span class="badge-tech">Operating Systems</span>
+                                <span class="badge-tech">Computer Networks</span>
+                                <span class="badge-tech">Software Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements & Hackathons Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400">Recognitions</h2>
+                        <h3 class="text-3xl font-extrabold text-white mt-2">Achievements & Publications</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <div class="glass-card p-5 border-t-2 border-amber-500">
+                            <span class="badge-achievement mb-3">🥈 2nd Position</span>
+                            <h5 class="font-bold text-white text-base">Road Safety Hackathon</h5>
+                            <p class="text-xs text-indigo-400 font-medium">IIT Roorkee (01/2024)</p>
+                            <p class="text-xs text-slate-400 mt-2">Accident Prediction & Prevention category for EmergenSee AI safety system.</p>
+                        </div>
+
+                        <div class="glass-card p-5 border-t-2 border-amber-500">
+                            <span class="badge-achievement mb-3">🥉 3rd Place</span>
+                            <h5 class="font-bold text-white text-base">Mython Data Hackathon</h5>
+                            <p class="text-xs text-indigo-400 font-medium">IIIT Sri City (02/2024)</p>
+                            <p class="text-xs text-slate-400 mt-2">Data analytics hackathon focusing on statistical data modeling.</p>
+                        </div>
+
+                        <div class="glass-card p-5 border-t-2 border-emerald-500 flex flex-col justify-between">
+                            <div>
+                                <span class="badge-paper mb-3">📜 Published Co-Author</span>
+                                <h5 class="font-bold text-white text-base">SSRN (Elsevier) Publication</h5>
+                                <p class="text-xs text-emerald-400 font-medium">Elsevier Journal (11/2025)</p>
+                                <p class="text-xs text-slate-400 mt-2">Community-Driven Sustainable Development Through Human-Centred Design.</p>
+                            </div>
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747902" target="_blank" class="mt-3 inline-flex items-center text-xs font-bold text-emerald-400 hover:underline">
+                                Read SSRN Paper ↗
+                            </a>
+                        </div>
+
+                        <div class="glass-card p-5 border-t-2 border-cyan-500">
+                            <span class="badge-tech mb-3">🎓 Participant</span>
+                            <h5 class="font-bold text-white text-base">IndustriAI Hackathon</h5>
+                            <p class="text-xs text-cyan-400 font-medium">IIT Madras Shaastra 2025 (02/2025)</p>
+                            <p class="text-xs text-slate-400 mt-2">Attended advanced industrial AI workshops and hackathon sessions.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME DOWNLOAD SECTION -->
+    <section id="resume" class="py-16 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 sm:p-12 border-2 border-indigo-500/30 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-950 text-indigo-400 text-xs font-bold">
+                        <span>📄 Official Resume Document</span>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-white">Review Giridhar R's Complete Qualifications</h3>
+                    <p class="text-slate-300 text-sm max-w-xl">Download the verified single-page resume or inspect the interactive viewer directly in your browser.</p>
+                </div>
+
+                <div class="flex flex-wrap gap-4 shrink-0">
+                    <a href="assets/Giridhar_Resume.pdf" target="_blank" download class="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-xl shadow-indigo-600/30 flex items-center space-x-2 transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>Download PDF Resume</span>
+                    </a>
+                    <button class="open-resume-modal px-6 py-3.5 rounded-xl glass-card hover:border-indigo-500/50 text-white font-semibold text-sm transition-all">
+                        Preview Interactive Viewer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Left -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">Let's Connect</h2>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Get in Touch with Giridhar</h3>
+                        <p class="text-slate-400 text-sm mt-3">Interested in hiring, research collaborations, or discussing projects? Feel free to reach out directly.</p>
+                    </div>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="glass-card p-4 flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Email Address</p>
+                                    <p class="text-sm font-bold text-white">rgiridhar1212@gmail.com</p>
+                                </div>
+                            </div>
+                            <button id="copyEmailBtn" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs text-indigo-300 font-medium transition-colors">Copy</button>
+                        </div>
+
+                        <div class="glass-card p-4 flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Phone Number</p>
+                                    <p class="text-sm font-bold text-white">+91 7695949443</p>
+                                </div>
+                            </div>
+                            <button id="copyPhoneBtn" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs text-emerald-300 font-medium transition-colors">Copy</button>
+                        </div>
+
+                        <div class="glass-card p-4 flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-cyan-600/20 text-cyan-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Location</p>
+                                <p class="text-sm font-bold text-white">Bengaluru, Karnataka, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Right -->
+                <div class="lg:col-span-7">
+                    <form id="contactForm" class="glass-card p-8 space-y-6">
+                        <h4 class="text-xl font-bold text-white">Send a Direct Message</h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Your Name</label>
+                                <input type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-indigo-500 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Your Email</label>
+                                <input type="email" required placeholder="e.g. sarah@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-indigo-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Subject</label>
+                            <input type="text" required placeholder="e.g. Project Inquiry / Opportunity" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-indigo-500 focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Message</label>
+                            <textarea required rows="4" placeholder="Hello Giridhar, I reviewed your portfolio..." class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-indigo-500 focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-xl shadow-indigo-600/30 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-slate-800 bg-slate-950 text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Giridhar R. All rights reserved. Grounded in empirical research & verified assets.</p>
+            <div class="flex space-x-6">
+                <a href="https://linkedin.com/in/rgiridhar12" target="_blank" class="hover:text-slate-300">LinkedIn</a>
+                <a href="https://github.com/giridhar122" target="_blank" class="hover:text-slate-300">GitHub</a>
+                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5747902" target="_blank" class="hover:text-slate-300">SSRN Paper ↗</a>
+                <a href="assets/Giridhar_Resume.pdf" target="_blank" class="hover:text-slate-300">Resume PDF</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJECT DETAILS MODAL -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-container p-6 sm:p-8 space-y-6">
+            <div class="flex items-start justify-between border-b border-slate-800 pb-4">
+                <div>
+                    <span id="modalBadge" class="badge-achievement mb-2">Badge</span>
+                    <h3 id="modalTitle" class="text-2xl font-extrabold text-white">Project Title</h3>
+                    <p id="modalSubtitle" class="text-xs text-indigo-400 font-semibold mt-1">Subtitle</p>
+                </div>
+                <button id="closeModalBtn" class="text-slate-400 hover:text-white p-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Tech Stack -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Technologies Used</h4>
+                <div id="modalTechStack" class="flex flex-wrap gap-2"></div>
+            </div>
+
+            <!-- Overview -->
+            <div>
+                <h4 class="text-sm font-bold text-white mb-1">Executive Summary</h4>
+                <p id="modalOverview" class="text-xs text-slate-300 leading-relaxed"></p>
+            </div>
+
+            <!-- Problem & Approach Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                    <h5 class="text-xs font-bold text-amber-400 uppercase mb-1.5">Problem / Bottleneck</h5>
+                    <p id="modalProblem" class="text-xs text-slate-300 leading-relaxed"></p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                    <h5 class="text-xs font-bold text-indigo-400 uppercase mb-1.5">Technical Approach</h5>
+                    <p id="modalApproach" class="text-xs text-slate-300 leading-relaxed"></p>
+                </div>
+            </div>
+
+            <!-- Results List -->
+            <div>
+                <h4 class="text-sm font-bold text-white mb-2">Key Accomplishments & Metrics</h4>
+                <ul id="modalResultsList" class="space-y-2 text-xs text-slate-300"></ul>
+            </div>
+
+            <!-- Figures Gallery -->
+            <div id="modalFiguresContainer" class="hidden"></div>
+
+            <!-- Code Snippet -->
+            <div id="modalCodeContainer" class="hidden">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Source Code Highlight</h4>
+                <pre class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs text-indigo-200 overflow-x-auto"><code id="modalCodeBlock"></code></pre>
+            </div>
+
+            <!-- Modal Footer Links -->
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                <a id="modalPdfBtn" href="#" target="_blank" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center transition-all">
+                    Download File / View Paper
+                </a>
+                <button onclick="document.getElementById('projectModal').classList.remove('active')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESUME VIEWER MODAL -->
+    <div id="resumeModal" class="modal-overlay">
+        <div class="modal-container max-w-4xl p-6 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <h3 class="text-xl font-bold text-white">Giridhar R - Resume Document</h3>
+                <button id="closeResumeBtn" class="text-slate-400 hover:text-white p-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <div class="w-full h-[650px] rounded-xl overflow-hidden bg-slate-900 border border-slate-800">
+                <iframe src="assets/Giridhar_Resume.pdf" class="w-full h-full"></iframe>
+            </div>
+
+            <div class="flex justify-end pt-2">
+                <a href="assets/Giridhar_Resume.pdf" download class="px-5 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <span>Download PDF File</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast">
+        <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span id="toastMsg" class="text-xs font-semibold">Notification</span>
+    </div>
+
+    <!-- JavaScript Scripts -->
+    <script src="js/gcn-simulator.js"></script>
+    <script src="js/accident-demo.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

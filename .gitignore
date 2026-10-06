@@ -1,0 +1,7 @@
+# Ignore raw datasets, large training dumps, and python scratch files
+ACCIDENT-DETECTION-AND-NOTIFICATION-SYSTEM-main/
+Final Year project/
+.user_uploaded/
+*.log.txt
+*.pyc
+__pycache__/
