@@ -48,7 +48,7 @@ def build_coau_dnn_model(input_dim=1084):
     model = models.Model(inputs=inputs, outputs=outputs)
     model.compile(optimizer='adam', loss='mse', metrics=['mae'])
     return model`,
-        pdfLink: 'assets/GCN_CoAu_Nanoparticles_Report.pdf',
+        pdfLink: 'assets/CoAu_Nanoparticles_Project_Report_March2026.pdf',
         pdfTitle: 'Download Updated Thesis Report (PDF)'
     },
     'emergensee-accident': {
