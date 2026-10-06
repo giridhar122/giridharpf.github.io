@@ -81,7 +81,7 @@ class AccidentDemo {
                     <span>${timeStr}</span>
                 </div>
                 <p><strong>Status:</strong> SENT (Latency: 5.4s)</p>
-                <p><strong>To:</strong> Emergency Contact (+91 93440 39624)</p>
+                <p><strong>To:</strong> Emergency Contact (+91 7695949443)</p>
                 <p><strong>Coordinates:</strong> 12.9716° N, 77.5946° E</p>
                 <p><strong>Reverse Geocode:</strong> NH-44 Highway Intersection, Bengaluru, KA</p>
                 <p class="mt-1 text-slate-300 italic">"ACCIDENT DETECTED at NH-44 Highway Intersection (Lat: 12.9716, Long: 77.5946). Immediate dispatch requested."</p>
